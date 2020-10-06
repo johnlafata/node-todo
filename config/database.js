@@ -1,3 +1,3 @@
 module.exports = {
-  localUrl: 'mongodb://mongodb/meanstacktutorials'
+  localUrl: 'mongodb://mongodb.node-todo.svc.cluster.local'
 };
