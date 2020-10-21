@@ -10,7 +10,7 @@ var service_url=appEnv.getServiceURL("mongodb2", {
 if ( service_url == null ){
     service_url = 'mongodb://mongodb';
 }
-console.log(">>> service_url" + service_url);
+console.log(">>> service_url: " + service_url);
 
 module.exports = {
   localUrl:
