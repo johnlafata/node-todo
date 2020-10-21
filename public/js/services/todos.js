@@ -1,3 +1,4 @@
+import logger from '../logSetup'
 angular.module('todoService', [])
 
 	// super simple service
@@ -5,9 +6,11 @@ angular.module('todoService', [])
 	.factory('Todos', ['$http',function($http) {
 		return {
 			get : function() {
+				logger.debug("before get");
 				return $http.get('/api/todos');
 			},
 			create : function(todoData) {
+				logger.debug("before create"+todoData);
 				return $http.post('/api/todos', todoData);
 			},
 			delete : function(id) {
