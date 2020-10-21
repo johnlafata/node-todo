@@ -1,3 +1,5 @@
+import logger from '../logSetup';
+
 var cfenv = require("cfenv")
 var appEnv = cfenv.getAppEnv()
 
@@ -8,8 +10,9 @@ var service_url=appEnv.getServiceURL("mongodb2", {
 
 // var service_url = appEnv.getService("mongodb2").credentials.uri;
 if ( service_url == null ){
-    service_url = 'mongodb://mongodb'
+    service_url = 'mongodb://mongodb';
 }
+logger.debug(">>> service_url" + service_url);
 
 module.exports = {
   localUrl:
