@@ -1,0 +1,8 @@
+---
+applications:
+- name: node-todo
+  memory: 1G
+  path: .
+  env:
+  services:
+  - mongodb2
